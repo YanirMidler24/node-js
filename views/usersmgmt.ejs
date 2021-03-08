@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function navigateToAddUSer() {
+        window.location.href = "http://localhost:3000/users/addnewuser";
+    }
+    function navigateToUpdateUser() {
+        window.location.href = "http://localhost:3000/users/updateuser";
+    }
+
+</script>
+
+<head>
+    <style>
+        .center {
+            margin-left: 400px;
+            width: 60%;
+            padding: 10px;
+
+        }
+
+        .floatRight {
+            float: right;
+            margin-right: 550px
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <title>Users mamagment</title>
+    <h1>Users mamagment</h1>
+</head>
+<br />
+<br />
+
+<body class="center">
+    <input type="button" value="Add New User " class="btn btn-primary" onclick="navigateToAddUSer()">
+
+    <strong style="margin-left: 600px;"> Click to go  <a  href="/main">back</a></strong>
+
+    <table border="1" class="table table-striped">
+        <tr>
+            <th>Username</th>
+            <th>User Creation Date</th>
+            <th>User Options</th>
+        </tr>
+
+    <% users.forEach(item=> { %>
+           
+
+            <td>
+
+
+                <%= item.username %>
+            </td>
+
+            <td>
+                <%= item.created_date %>
+            </td>
+
+            <td>
+                <form action="/users/updateUserPost" method="post">
+                    <button type="submit" name="updateUserName" value="<%= item.username %>" class="btn btn-primary"
+                        onclick="navigateToUpdateUser()">update user</button>
+                </form>
+                <br />
+
+                <form action="/users/deleteuser" method="post">
+                    <button type="submit" name="DelUsername" class="btn btn-primary" value="<%= item.username %>">delete
+                        user</button>
+                </form>
+            </td>
+            </tr>
+        <br />
+        <%}) %>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

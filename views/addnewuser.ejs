@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .center {
+            margin-left: 600px;
+            width: 60%;
+            padding: 10px;
+
+        }
+
+        .floatRight {
+            float: right;
+            margin-right: 550px
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    <title>add new user</title>
+</head>
+<body class="center">
+    <h1>add new user</h1>
+    <img class="floatRight" src="https://cdn0.iconfinder.com/data/icons/admin-panel-glyph-black/2048/633_-_Create_User-128.png" alt="some pic...">
+    <form action='/users/addnewuserPost' method="POST">
+        name : <input type="text" name="NewUsername" placeholder="enter new name..."> <Br/><br/>
+        password : <input type="password" name="NewUserPassword" placeholder="enter password ..."><br/><br/>
+        <input type="submit"  value="Add New User" class="btn btn-primary">
+    </form>
+    <br/>
+    <strong> Click to go  <a href="/main/usersmgmt">back</a></strong>
+
+</body>
+</html>

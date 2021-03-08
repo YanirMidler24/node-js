@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid gray;
+            padding: 10px;
+        }
+
+        .floatRight{float:right;margin-left:20px}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <title>main</title>
+    <h1>MAIN PAGE</h1>
+</head>
+
+<body class="center">
+    <img class="floatRight"
+        src="https://cdn.xl.thumbs.canstockphoto.co.il/%D7%A7%D7%95%D7%9C%D7%A0%D7%95%D7%A2-%D7%98%D7%9C%D7%95%D7%99%D7%96%D7%99%D7%94-%D7%AA%D7%99%D7%A8%D7%A1-%D7%93%D7%9C%D7%99-%D7%A7%D7%A4%D7%95%D7%A5-%D7%90%D7%9C%D7%A1%D7%99%D7%93%D7%99-%D7%94%D7%AA%D7%A4%D7%A9%D7%98-%D7%94%D7%A1%D7%A8%D7%98-%D7%A7%D7%9C%D7%99%D7%A4-%D7%90%D7%A8%D7%98-%D7%95%D7%A7%D7%98%D7%95%D7%A8%D7%99_csp44513709.jpg"
+        alt="cinima pic">
+    <ul class="list-group" style="width: 20%;">
+        <br/>
+        <li class="list-group-item"><a href="/main/searchmovie">Search movie page</a></li><br />
+        <li class="list-group-item"><a href="/main/createmoviemenu">Create movie page</a></li><br />
+        <% if(username=="admin" ) { %>
+            <li class="list-group-item"><a href="main/usersmgmt">Edit Users</a></li><br />
+            <%} %>
+                <li class="list-group-item"><a href="/logout">Log Out</a></li><br />
+
+    </ul>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid gray;
+            padding: 10px;
+        }
+
+        .floatRight{float:right;margin-left:20px}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <title>create movie</title>
+</head>
+<body class="center">
+    <h1 >create movie</h1>
+    <img class="floatRight" src="https://geoffishere.com/wp-content/uploads/2014/01/making-video-300x225.jpg" alt="some pic..">
+    <form action="/main/createmoviemenu" method="POST">
+        Name : <input type="text" name="moviename" placeholder="Enter New Movie Name"><br/><br/>
+        Language : <input type="text" name="language" placeholder="Enter Movie language"><br/><br/>
+        genres : <input type="text" name="genres" placeholder="Enter Movie genres"><br/><br/>
+        Image : <input type="text" name="image" placeholder="Only Link!..."><br/><br/>
+        <input type="submit" value="Save" class="btn btn-primary">
+        <br/>
+
+    </form>
+
+
+
+    <br/>
+
+    <a href="/main">back</a>
+</body>
+</html>

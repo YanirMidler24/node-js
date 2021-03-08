@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid gray;
+            padding: 10px;
+        }
+
+        .center2 {
+            margin-left: 320px;
+            width: 60%;
+            padding: 10px;
+        }
+
+        .floatRight {
+            float: right;
+            margin-left: 20px
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <title>Search Results</title>
+</head>
+
+<body class="center">
+    <div class="center2">
+        <h1>Search Results</h1>
+        <strong> Click to go back : <a href="/main/searchmovie">back</a></strong>
+    </div>
+    <br />
+    <table border="1" style="width: 70%;" class="center">
+        <thead>
+            <tr>
+                <th>Search movie Data</th>
+                <th>Another movie Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style=" 
+                    position: relative; 
+                    padding: 10px 0px; 
+                 ">
+                    <br />
+                    <% data.map(x=> { %>
+
+                        <ul>
+                            <h2>Movie Details</h2>
+
+                            <li>
+                                <a href="/movieData/<%= x.name %>">
+                                    <%= x.name %>
+                                </a>
+                            </li>
+                            <li>
+                                <%= x.genres %>
+                            </li>
+                            <li>
+                                <%= x.language %>
+                            </li>
+                        </ul>
+                        <%})%>
+
+                </td>
+
+
+
+                <td>
+                    <% movies.map(x=> { %>
+
+                        <ul>
+                            <h2>Movie Details</h2>
+
+                            <li>
+                                <a href="/movieData/<%= x.name %>">
+                                    <%= x.name %>
+                                </a>
+                            </li>
+                            <li>
+                                <%= x.genres %>
+                            </li>
+                            <li>
+                                <%= x.language %>
+                            </li>
+                        </ul>
+                        <%})%>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+
+
+
+
+</body>
+
+</html>

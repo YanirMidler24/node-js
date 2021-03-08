@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            border: 3px solid gray;
+            padding: 10px;
+        }
+
+        .center2 {
+            margin-left: 320px;
+            width: 60%;
+            padding: 10px;
+        }
+
+        .floatRight {
+            float: right;
+            margin-left: 20px
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <title>movie Data</title>
+</head>
+
+<body class="center">
+    <h1>Movie Data</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>movie image</th>
+                <th>movie ID</th>
+                <th>movie name</th>
+                <th>movie genres</th>
+                <th>movie language</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <% data.forEach(x=> { %>
+                <td>
+                    <img src="<%= x.image.medium %>" alt="no pic">
+                </td>
+                <td>
+                    <%= x.id %></a>
+                </td>
+                <td>
+                    <%= x.name %></a>
+                </td>
+                <td>
+                    <%= x.genres %>
+                </td>
+                <td>
+                    <%= x.language %>
+                </td>
+
+
+                <%})%>
+        </tbody>
+    </table>
+
+    <a href="/main">back to main page</a> <br />
+    <a href="/main/SearchResults">Search Results page</a>
+
+</body>
+
+</html>
